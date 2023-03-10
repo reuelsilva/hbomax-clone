@@ -45,7 +45,7 @@ header{
 
 div#menu > nav > ul{
     display: flex;
-    list-style: none;
+    list-style-type: none;
     gap: 48px;
 }
 
