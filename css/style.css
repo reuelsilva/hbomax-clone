@@ -16,21 +16,19 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    margin: 40px 50px 50px 50px;
     background-color: #17161B;
     overflow-x: hidden;
 }
 
 .destaque{
-    background-image: url('../img/img-destaque.png');
-    background-size: cover;
+    background-image: url('../img/bg-home.png');
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center right;
-    min-height: 190px;
-    max-height: 900px;
+    background-position: top right; 
 }
 
 header{
@@ -39,79 +37,122 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0px 50px 0px 50px;
+    margin: 40px 50px 0px 50px;
     border-radius: 20px;
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 40%);
 }
 
-div#menu nav ul{
+div#menu > nav > ul{
     display: flex;
     list-style: none;
     gap: 48px;
 }
 
-div#menu nav ul a{
+div#menu > nav > ul > a{
     text-decoration: none;
-    color: #FFFFFF;     
+    color: #FFFFFF;
 }
 
-div#menu nav ul a li{
+div#menu > nav > ul > a:hover{
+    color: rgba(255, 255, 255, 0.41);
+    transition: color, 0.5s;
+}
+
+div#menu > nav > ul > a > li{
     font-family: 'Gilroy-Medium';
     font-size: 20px;
 }
 
-.sobre-destaque{
+div#avatar:hover{
+    cursor: pointer;
+}
+
+main{
+    margin: 0px 50px;
+}
+
+
+.conteudo-destaque{
     padding-top: 69px;
     padding-bottom: 67px;
     color: #FFFFFF;
 }
 
-.sobre-destaque p{
+.conteudo-destaque p{
     font-family: 'Gilroy-Medium';
     font-size: 20px;
 }
 
-.sobre-destaque h1{
+.conteudo-destaque h1{
     font-family: 'Gilroy-Bold';
     text-transform: uppercase;
     font-size: 80px;
-    max-width: 575px;
     margin-top: 10px;
 
 }
 
-.sobre-destaque h2{
+.conteudo-destaque h2{
     font-family: 'Gilroy-Medium';
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-#imdb-nota{
+#nota-imdb{
     display: flex;
     gap: 15px;
-    padding-bottom: 30.25px;
     font-family: 'Gilroy-Medium';
     font-size: 28px;
+    padding-bottom: 30.25px;
 }
 
-#button-main-play{
-    background-color: transparent;
+button#play-destaque{
     display: flex;
     gap: 10px;
+    background-color: transparent;
+    font-family: 'Gilroy-Medium';
+    font-size: 18px;
+    color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     padding: 15px;
-    font-size: 18px;
-    font-family: 'Gilroy-Medium';
-    color: #FFFFFF;
 }
 
-.popullar-collections h2{
+button#play-destaque:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.065);
+    transition: background-color, 0.5s;
+}
+
+main h2{
     font-family: 'Gilroy-Bold';
     font-size: 30px;
     color: #FFFFFF;  
     line-height: 35.16px;
+}
+
+.popullar-collections > ul{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    overflow: scroll;
+    list-style-type: none;
+}
+
+.popullar-collections > ul::-webkit-scrollbar{
+    width: 0px;
+}
+
+.popullar-collections > ul > li{
+    padding: 2px;
+    cursor: pointer;
+}
+
+.popullar-collections > ul > li > img:hover{
+    outline: 2px solid rgba(255, 255, 255, 0.250);
+    border-radius: 10px;
+    transition: outline, 0.2s;
 }
 
 .group-popullar{
@@ -125,18 +166,12 @@ div#menu nav ul a li{
     width: 0px;
 }
 
-.new-releases h2{
-    font-family: 'Gilroy-Bold';
-    font-size: 30px;
-    color: #FFFFFF;  
-    line-height: 35.16px;
-}
-
 .group-releases{
     display: flex;
     margin-top: 20px;
     gap: 20px;
     overflow-x: scroll;
+    padding: 2px;
 }
 
 .group-releases::-webkit-scrollbar{
@@ -148,9 +183,15 @@ div#menu nav ul a li{
     height: 280px;
 }
 
+div.container-card:hover{
+    outline: 2px solid rgba(255, 255, 255, 0.250);
+    border-radius: 10px;
+    transition: outline, 0.2s;
+}
+
 .sub{
-    width: 298px; /*338px com 20 padding left e right*/
-    height: 58px; /*98 com 20 px top e bottom*/
+    width: 338px; /*338px com 20 padding left e right*/
+    height: 98px; /*98 com 20 px top e bottom*/
     padding: 20px;
     background-color: rgb(0, 0, 0, 15%);
     backdrop-filter: blur(5px);
@@ -175,3 +216,15 @@ div#menu nav ul a li{
     font-size: 16px;
 }
 
+footer{
+    background-color: #030328;
+    width: 100vw;
+    height: 60px;
+}
+
+footer p{
+    color: #9E86FF;
+    font-family: 'Gilroy-Regular';
+    text-align: center;
+    line-height: 60px;
+}
