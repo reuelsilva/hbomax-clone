@@ -178,12 +178,12 @@ main h2{
     width: 0px;
 }
 
-.container-card{
+.item-card{
     width: 338px;
     height: 280px;
 }
 
-div.container-card:hover{
+div.item-card:hover{
     outline: 2px solid rgba(255, 255, 255, 0.250);
     border-radius: 10px;
     transition: outline, 0.2s;
